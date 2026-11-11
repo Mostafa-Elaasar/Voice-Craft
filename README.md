@@ -6,7 +6,7 @@
 
 **Run your own sound studio. Act out the lines. Impress the clients. Become a Voice Legend.**
 
-[![Play in browser](https://img.shields.io/badge/▶_Play-in_browser-ff2a5f?style=for-the-badge)](https://voice-Craft.github.io/play.html)
+[![Play in browser](https://img.shields.io/badge/▶_Play-in_browser-ff2a5f?style=for-the-badge)](https://mostafa-elaasar.github.io/Voice-Craft/)
 [![Android](https://img.shields.io/badge/Android-APK-3DDC84?style=for-the-badge&logo=android&logoColor=white)](../../releases/)
 [![Linux](https://img.shields.io/badge/Linux-x86__64-FCC624?style=for-the-badge&logo=linux&logoColor=black)](../../releases/)
 ![Made with Godot](https://img.shields.io/badge/Made_with-Godot_4-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
@@ -29,10 +29,11 @@ Use the money you earn to decorate your studio and hire sound engineers. Better 
 
 | Platform | How to get it |
 |---|---|
-| 🌐 **Web** | [**Play now**](https://voice-Craft.github.io/play.html), nothing to install |
+| 🌐 **Web** | [**Play now**](https://mostafa-elaasar.github.io/Voice-Craft/), nothing to install |
 | 🤖 **Android** | Download `Voice-Craft.apk` from the [latest release](../../releases/latest) and install it |
 | 🐧 **Linux** | Download `VoiceCraft.x86_64` from the [latest release](../../releases/latest), make it executable and run it |
-| 🍎 iOS, macOS, 🪟 Windows, 🥽 visionOS | 🔜 Coming soon |
+| 🪟 **Windows** | Download `VoiceCraft.exe` from the [latest release](../../releases/latest), ren the executable |
+| 🍎 iOS, macOS, 🥽 visionOS | 🔜 Coming soon |
 
 > 🎤 **The game needs your microphone.** Allow the permission when asked. On the web, use a modern browser over HTTPS.
 
