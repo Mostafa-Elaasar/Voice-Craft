@@ -2,27 +2,20 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -40,16 +33,15 @@ jobs:
           # Create a clean folder for deployment
           mkdir -p public_build
           
-          # Copy all files from your web-edition folder into the build folder
+          # Copy everything from web-edition straight into the root of public_build
           cp -r web-edition/* public_build/
           
-          # Rename your Godot HTML file to index.html so GitHub Pages can load it automatically
-          mv public_build/VoiceCraft1.html public_build/index.html
+          # Debug: Verify index.html exists right here
+          ls -la public_build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload strictly the isolated build folder instead of the entire repository
           path: 'public_build'
 
       - name: Deploy to GitHub Pages
