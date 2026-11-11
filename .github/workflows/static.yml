@@ -31,13 +31,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Isolate and prepare Godot web build
+        run: |
+          # Create a clean folder for deployment
+          mkdir -p public_build
+          
+          # Copy all files from your web-edition folder into the build folder
+          cp -r web-edition/* public_build/
+          
+          # Rename your Godot HTML file to index.html so GitHub Pages can load it automatically
+          mv public_build/VoiceCraft1.html public_build/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload strictly the isolated build folder instead of the entire repository
+          path: 'public_build'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
